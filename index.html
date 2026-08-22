@@ -1,6 +1,14 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
   <head>
+   <script>
+  window.addEventListener('error', function(e) {
+    document.body.insertAdjacentHTML('afterbegin', '<pre style="position:fixed;top:0;left:0;right:0;z-index:99999;background:#fee;color:#900;padding:10px;font-size:11px;white-space:pre-wrap;direction:ltr;text-align:left;">ERROR: ' + (e.message||'') + '\n' + (e.error && e.error.stack ? e.error.stack : '') + '</pre>');
+  });
+  window.addEventListener('unhandledrejection', function(e) {
+    document.body.insertAdjacentHTML('afterbegin', '<pre style="position:fixed;top:0;left:0;right:0;z-index:99999;background:#fee;color:#900;padding:10px;font-size:11px;white-space:pre-wrap;direction:ltr;text-align:left;">REJECTION: ' + (e.reason && e.reason.message ? e.reason.message : e.reason) + '</pre>');
+  });
+</script> 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
