@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Alsafa Accounting"
+description = "A blank starting point for building an accounting application."
+version = "1.0.0"
+id = "artifacts/alsafa-accounting"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 18825
+
+[services.development]
+run = "pnpm --filter @workspace/alsafa-accounting run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/alsafa-accounting", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/alsafa-accounting/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18825"
+BASE_PATH = "/"
