@@ -30,6 +30,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
+ d7a0c20d9fce35f7cb4408eafcfd1c29d2ae60a5
 
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
