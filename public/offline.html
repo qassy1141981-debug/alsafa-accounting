@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>غير متصل - النظام المحاسبي</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      body {
+        font-family: 'Cairo', sans-serif;
+        background: #1e2a4a;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        text-align: center;
+        padding: 2rem;
+      }
+      .container {
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(255,255,255,0.1);
+        border-radius: 16px;
+        padding: 3rem 2rem;
+        max-width: 400px;
+        width: 100%;
+      }
+      .icon {
+        font-size: 64px;
+        margin-bottom: 1.5rem;
+      }
+      h1 {
+        font-size: 1.6rem;
+        font-weight: 800;
+        margin-bottom: 0.75rem;
+      }
+      p {
+        color: rgba(255,255,255,0.7);
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+      }
+      button {
+        background: #fff;
+        color: #1e2a4a;
+        border: none;
+        border-radius: 10px;
+        padding: 0.75rem 2rem;
+        font-family: 'Cairo', sans-serif;
+        font-size: 1rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: opacity 0.2s;
+      }
+      button:hover { opacity: 0.9; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="icon">📡</div>
+      <h1>لا يوجد اتصال بالإنترنت</h1>
+      <p>يبدو أنك غير متصل بالإنترنت. تحقق من الاتصال ثم حاول مجدداً.</p>
+      <button onclick="window.location.reload()">إعادة المحاولة</button>
+    </div>
+  </body>
+</html>

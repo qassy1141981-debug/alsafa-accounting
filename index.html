@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>النظام المحاسبي المتكامل</title>
+    <meta name="description" content="نظام محاسبي متكامل يعمل محلياً بدون سيرفر" />
+    <meta name="author" content="Ch.mohamed" />
+    <link rel="icon" type="image/png" href="/alsafa-accounting/icon/icon-192.png" />
+
+    <meta property="og:title" content="النظام المحاسبي المتكامل" />
+    <meta
+      property="og:description"
+      content="نظام محاسبي متكامل يعمل محلياً بدون سيرفر"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/alsafa-accounting/icon/icon-512.png" />
+    <meta property="og:image:type" content="image/png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="/alsafa-accounting/icon/icon-512.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Geist:wght@100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+      crossorigin
+    />
+    <!-- PWA -->
+    <link rel="manifest" href="/alsafa-accounting/site.webmanifest" />
+    <meta name="theme-color" content="#1e2a4a" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="محاسبة" />
+    <link rel="apple-touch-icon" href="/alsafa-accounting/icon/icon-192.png" />
+
+    <!-- Detect dark mode preference and set the class before next-themes loads. This avoids a flash of unstyled content (FOUC) when the page loads. -->
+    <script>
+      try {
+        let theme = localStorage.getItem("theme");
+        if (theme === "system" || !theme) {
+          let prefersDark = window.matchMedia(
+            "(prefers-color-scheme: dark)",
+          ).matches;
+          theme = prefersDark ? "dark" : "light";
+        }
+        document.documentElement.classList.add(theme);
+      } catch (e) {}
+    </script>
+
+    <link href="/src/index.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
